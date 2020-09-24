@@ -1,63 +1,8 @@
 class Asterisk < Formula
   desc "Open Source PBX and telephony toolkit"
   homepage "http://www.asterisk.org"
-  url "http://downloads.asterisk.org/pub/telephony/asterisk/releases/asterisk-15.1.5.tar.gz"
+  url "http://downloads.asterisk.org/pub/telephony/asterisk/releases/asterisk-16.12.0.tar.gz"
   sha256 "f1ef579fa635a54c6c149b47f23f3f022e5e1ad0ef762122b2b2f2410c4fa759"
-
-  # Fixes needed for stable, 15 branch, and master
-  patch do
-    url "https://github.com/leedm777/asterisk/commit/cc159e4152e9f071228eec47fdaf07b3974e27db.patch"
-    sha256 "cf8c444fc7fe38d5761852d780fb4e8284f43df716f1a649e862ec186158f711"
-  end
-
-  head do
-    url "https://github.com/asterisk/asterisk.git", :branch => "15"
-    version "15-devel"
-
-    # Fixes for bugs introduced on 15 branch
-    patch do
-      url "https://github.com/leedm777/asterisk/commit/5e9d11fb518f8072d0f3d57ec4c3303431e849d4.patch"
-      sha256 "3b3fd91ea4580572baefb85adf8d7ae544e38255efa4d9f071a560b1cd05ea9e"
-    end
-  end
-
-  head do
-    url "https://github.com/asterisk/asterisk.git"
-    version "head"
-
-    # Fixes for bugs introduced on 15 branch
-    patch do
-      url "https://github.com/leedm777/asterisk/commit/5e9d11fb518f8072d0f3d57ec4c3303431e849d4.patch"
-      sha256 "3b3fd91ea4580572baefb85adf8d7ae544e38255efa4d9f071a560b1cd05ea9e"
-    end
-  end
-
-  # backport fixes that are already on the 15 branch
-  stable do
-    # tests: Fix warnings found on Mac
-    patch do
-      url "https://github.com/asterisk/asterisk/commit/ef4dc43a756c61defa8c6cc93025725924e2285c.patch"
-      sha256 "fe886362e4979e750f3f053313180e89c2667e3dc58158cf73796dfdc97fa14a"
-    end
-
-    # iostream: Fix ast_iostream_printf declaration
-    patch do
-      url "https://github.com/asterisk/asterisk/commit/9da69ac6c16e008c72ec8fda2d34b1036cdbfde3.patch"
-      sha256 "7ef07c38dbcc7b714245695127cb25bf4642bc3a3aed4c8814158d0a7305aae8"
-    end
-
-    # res_fax: Remove checks for unsigned values being >= 0
-    patch do
-      url "https://github.com/asterisk/asterisk/commit/85d675b14c7f946b86cc371a43aaa7f5d314d8c2.patch"
-      sha256 "3011e3a8c234687cefa1202dff25159da40462594ec89b9d9d6b8b736176920a"
-    end
-
-    # app_minivm: Fix possible uninitialized return value
-    patch do
-      url "https://github.com/asterisk/asterisk/commit/19ba25dd962895d9a25b88678f7a49d21f7adc54.patch"
-      sha256 "70bd3c397c1e44a6bb8bdee06c221fa50994c485fbf98c7defd462dd96e3c2ce"
-    end
-  end
 
   option "with-dev-mode", "Enable dev mode in Asterisk"
   option "with-clang", "Compile with clang (default)"
