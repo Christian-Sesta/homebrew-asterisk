@@ -1,8 +1,8 @@
 class Asterisk < Formula
   desc "Open Source PBX and telephony toolkit"
   homepage "http://www.asterisk.org"
-  url "http://downloads.asterisk.org/pub/telephony/asterisk/releases/asterisk-16.12.0.tar.gz"
-  sha256 "f1ef579fa635a54c6c149b47f23f3f022e5e1ad0ef762122b2b2f2410c4fa759"
+  url "https://downloads.asterisk.org/pub/telephony/asterisk/releases/asterisk-16.12.0.tar.gz"
+  sha256 "b576a6f151115257f3d8200a97f53612a30dcbeb1a907e1f54d34b0027325dea"
 
   option "with-dev-mode", "Enable dev mode in Asterisk"
   option "with-clang", "Compile with clang (default)"
