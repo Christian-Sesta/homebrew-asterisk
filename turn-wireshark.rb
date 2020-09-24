@@ -19,7 +19,7 @@ class TurnWireshark < Formula
     depends_on "homebrew/dupes/libpcap" => :optional
   end
 
-  devel do
+  head do
     url "https://www.wireshark.org/download/src/all-versions/wireshark-1.99.8.tar.bz2"
 
     patch do
