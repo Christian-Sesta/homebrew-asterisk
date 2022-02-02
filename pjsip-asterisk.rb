@@ -1,8 +1,8 @@
 class PjsipAsterisk < Formula
   desc "PJSIP libraries for Asterisk"
   homepage "http://www.pjsip.org/"
-  url "http://pjsip.org/release/2.7.1/pjproject-2.7.1.tar.bz2"
-  sha256 "59fabc62a02b2b80857297cfb10e2c68c473f4a0acc6e848cfefe8421f2c3126"
+  url "https://github.com/pjsip/pjproject/archive/refs/tags/2.7.1.tar.gz"
+  sha256 "3334e090fd189c5f00379afa646470a674a34e0cfa85a78651101b65c698a068"
 
   keg_only "Specifically tuned just for asterisk"
 
