@@ -1,7 +1,7 @@
 class Asterisk < Formula
   desc "Open Source PBX and telephony toolkit"
   homepage "http://www.asterisk.org"
-  url "https://downloads.asterisk.org/pub/telephony/asterisk/releases/asterisk-16.12.0.tar.gz"
+  url "https://downloads.asterisk.org/pub/telephony/asterisk/releases/asterisk-18.9.0.tar.gz"
   sha256 "b576a6f151115257f3d8200a97f53612a30dcbeb1a907e1f54d34b0027325dea"
 
   option "with-dev-mode", "Enable dev mode in Asterisk"
@@ -90,7 +90,9 @@ class Asterisk < Formula
                           "--without-gmime",
                           "--without-gtk2",
                           "--without-iodbc",
-                          "--without-netsnmp"
+                          "--without-netsnmp",
+                          "--with-resample",
+                          "--with-jansson-bundled"
 
     system "make", "menuselect/cmenuselect",
                    "menuselect/nmenuselect",
